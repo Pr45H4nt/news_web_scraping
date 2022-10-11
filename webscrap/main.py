@@ -41,7 +41,7 @@ def scrape_items():
             "Title" : title.replace("'", "").replace('"', ""),
             "Date Posted" : date_posted.replace('"', ""),
             #slicing between two words 'src' and 'alt' to find the link for the thumbnail
-            "Thumbnail" : image[image.find('src')+6:image.find('alt')-2]
+            "Thumbnail" : image[image.find('src')+5:image.find('alt')-2]
         }
         #appending the dict in the Total data
         Totaldata.append(data)
